@@ -15,7 +15,7 @@ Backend написан на Django и Flask
 ### OffersApi_update - обновление данных через (PyMySQL)
 ### monitor.list.update.mongobd - обновление данных через (MongoBD)
 ##### Были использвоаны различные Базы данных:
-`PyMySQL`, `MongoDB`, `SQLite`
+`PyMySQL`  `MongoDB`  `SQLite`
 
 Атак же множество различных библиотек.
 > aiogram, aiohttp, bs4, Django, Djongo(для MongoDB), Flask, Selenium, Pandas, Rabbit_MQ и т.д.
