@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<form method="POST">
+        {% csrf_token %}
+        <p>Date_from: <input type="text" name="date_from" placeholder="2020-11-01" 
+          pattern="[0-9]{4}[-]{1}[0-9]{2}[-]{1}[0-9]{2}"></p>
+        <p>Date_to: <input type="text" name="date_to" placeholder="2020-11-01"
+          pattern="[0-9]{4}[-]{1}[0-9]{2}[-]{1}[0-9]{2}"></p>
+        <div>
+          <p><input type="submit" value="Найти"></p>
+          <p><a href="{% url 'export_users_csv' %}">Export</a></p>
+        </div>
+    </form>
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+<input type="text" id="Webmster" onkeyup="Sorting('Webmster', 0)" placeholder="Search Webmster" title="Type in a name">
+<input type="text" id="Category" onkeyup="Sorting('Category', 1)" placeholder="Search Category" title="Type in a name">
+<input type="text" id="Offer" onkeyup="Sorting('Offer', 2)" placeholder="Search Offers" title="Type in a name">
+<input type="text" id="Rekl" onkeyup="Sorting('Rekl', 3)" placeholder="Search Rekl" title="Type in a name">
+<input type="text" id="Country" onkeyup="Sorting('Country', 4)" placeholder="Search Country" title="Type in a name">
+<input type="text" id="Confirmed" onkeyup="Sorting('Confirmed', 5)" placeholder="Search Confirmed" title="Type in a name">
+<input type="text" id="Pending" onkeyup="Sorting('Pending', 6)" placeholder="Search Pending" title="Type in a name">
+<input type="text" id="Hold" onkeyup="Sorting('Hold', 7)" placeholder="Search Hold" title="Type in a name">
+<input type="text" id="Source" onkeyup="Sorting('Source', 8)" placeholder="Search Source" title="Type in a name">
+<input type="text" id="Date" onkeyup="Sorting('Date', 9)" placeholder="Search Date" title="Type in a name">
+<table id="myTable">
+  <tr>
+    <tr>
+      <th>Webmster</th>
+      <th>Category</th>
+      <th>Offer</th>
+      <th>Rekl</th>
+      <th>Country</th>
+      <th>Confirmed</th>
+      <th>Pending</th>
+      <th>Hold</th>
+      <th>Source</th>
+      <th>Date</th>
+    </tr>   
+    <tr>
+      {% for category in info %}
+    </tr>
+    <tr>
+        <td>{{category.0}}</td>
+        <td>{{category.1}}</td>
+        <td>{{category.2}}</td>
+        <td>{{category.3}}</td>
+        <td>{{category.4}}</td>
+        <td>Charge: {{category.5.0}},  Revenue: {{category.5.1}},  Earning: {{category.5.2}}</td>
+        <td>Charge: {{category.6.0}},  Revenue: {{category.6.1}},  Earning: {{category.6.2}}</td>
+        <td>Charge: {{category.7.0}},  Revenue: {{category.7.1}},  Earning: {{category.7.2}}</td>
+        <td>{{category.8}}</td>
+        <td>{{category.9}}</td>
+      {%endfor%}
+    </tr>
+   </tr>
+  </tr>
+</table>
+
+<script>
+  function Sorting(row, tdNum) {
+   var input, filter, table, tr, td, i;
+   input = document.getElementById(row);
+   filter = input.value.toUpperCase();
+   table = document.getElementById("myTable");
+   tr = table.getElementsByTagName("tr");
+   for (i = 0; i < tr.length; i++) {
+     td = tr[i].getElementsByTagName("td")[tdNum];
+     if (td) {
+       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+         tr[i].style.display = "";
+       } else {
+         tr[i].style.display = "none";
+       }
+     }       
+   }
+ }
+ </script>
+ </body>
+ </html>
+ 
+
+
+
+
+
+

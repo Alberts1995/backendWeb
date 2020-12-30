@@ -1,0 +1,9 @@
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <input type="submit" value="Excel" name="Excel">
+        </div>
+    </form>
+{% endblock %}
+
