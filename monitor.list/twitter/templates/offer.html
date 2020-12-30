@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<div id="app">
+    <div class="content">
+        <div class="row">
+            <div class="col col--left left">
+                <div class="left__title-card">Приложения/напрямую с FB (20%)</div>
+                <div class="left__legend">
+                    <div class="left__legend-item">NEW (30%)</div>
+                    <div class="left__legend-item">OLD (70%)</div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="left__table">
+                        <thead>
+                            <tr>
+                                <th  colspan="2">Сумма за 02.07.2020 (Пн)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Обратка</td>
+                                <td>{{data_month.TotalInformation_month.Total.0.Month_Total_Gross_FB}} $</td>
+                            </tr>
+                            <tr>
+                                <td>Маржа</td>
+                                <td>{{data_month.TotalInformation_month.Total.0.Month_Total_Merjinalnost_FB}} $</td>
+                            </tr>
+                            <tr>
+                                <td>План</td>
+                                <td>{{data_month.TotalInformation_month.Total.0.Month_Plan_FB}} $</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col col--right right">
+                <div class="table-wrapper">
+                    <table class="table-main">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Рекламодатели</th>
+                                <th colspan="3">За 02.07.2020 (ПН)</th>
+                                <th colspan="3">За За Август</th>
+                            </tr>
+                            <tr>
+                                <th>Оборотка</th>
+                                <th>Маржа</th>
+                                <th>План</th>
+                                <th>Оборотка</th>
+                                <th>Маржа</th>
+                                <th>План</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.0.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.0.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.0.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.0.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.0.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.0.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.0.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                            <tr>
+                                <td>{{data_month.Total_Day.FB.1.Reckl}}</td>
+                                <td>{{data_month.Total_Day.FB.1.gross}}</td>
+                                <td>{{data_month.Total_Day.FB.1.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.FB.1.plan_day}}(100%)
+                                    <span class="load load--full"></span>
+                            </td>
+                              
+      
+                                <td>{{data_month.TotalInformation_month.FB.1.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.1.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.1.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.2.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.2.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.2.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.2.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.2.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.2.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.2.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.3.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.3.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.3.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.3.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.3.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.3.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.3.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.4.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.4.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.4.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.4.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.4.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.4.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.4.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.5.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.5.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.5.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.5.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.5.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.5.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.5.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.6.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.6.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.6.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.6.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.6.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.6.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.6.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.7.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.7.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.7.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.7.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.7.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.7.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.7.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                              
+                                <tr>
+                                    <td>{{data_month.Total_Day.FB.8.Reckl}}</td>
+                                    <td>{{data_month.Total_Day.FB.8.gross}}</td>
+                                    <td>{{data_month.Total_Day.FB.8.morja}}</td>
+                                    <td class="full">{{data_month.Total_Day.FB.8.plan_day}}(100%)
+                                        <span class="load load--full"></span>
+                                </td>
+                              
+                                <td>{{data_month.TotalInformation_month.FB.8.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.8.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.8.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col--left left">
+                <div class="left__title-card">Схемы (75%)</div>
+                <div class="left__legend">
+                    <div class="left__legend-item">NEW (30%)</div>
+                    <div class="left__legend-item">OLD (70%)</div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="left__table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Сумма за 02.07.2020 (Пн)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Обратка</td>
+                                <td>{{data_month.TotalInformation_month.Total.1.Month_Total_Gross_sxema}} $</td>
+                            </tr>
+                            <tr>
+                                <td>Маржа</td>
+                                <td>{{data_month.TotalInformation_month.Total.1.Month_Total_Merjinalnost_sxema}} $</td>
+                            </tr>
+                            <tr>
+                                <td>План</td>
+                                <td>{{data_month.TotalInformation_month.Total.1.Month_Plan_sxema}} $</td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col col--right right">
+                <div class="table-wrapper">
+                    <table class="table-main">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Рекламодатели</th>
+                                <th colspan="3">За 02.07.2020 (ПН)</th>
+                                <th colspan="3">За За Август</th>
+                            </tr>
+                            <tr>
+                                <th>Оборотка</th>
+                                <th>Маржа</th>
+                                <th>План</th>
+                                <th>Оборотка</th>
+                                <th>Маржа</th>
+                                <th>План</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.0.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.0.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.0.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.0.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.0.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.0.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.0.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </tr>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.1.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.1.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.1.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.1.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.1.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.1.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.1.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </tr>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.2.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.2.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.2.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.2.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.2.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.2.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.2.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.3.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.3.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.3.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.3.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.3.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.3.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.3.plan_month}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.4.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.4.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.4.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.4.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.4.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.4.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.4.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.5.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.5.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.5.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.5.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.5.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.5.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.5.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.6.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.6.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.6.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.6.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.6.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.6.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.6.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.7.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.7.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.7.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.7.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.7.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.7.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.7.plan_month}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.FB.8.Reckl}}</td>
+                                <td>{{data_month.Total_Day.FB.8.gross}}</td>
+                                <td>{{data_month.Total_Day.FB.8.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.FB.8.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.FB.8.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.8.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.FB.8.plan_month}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>{{data_month.Total_Day.схема.9.Reckl}}</td>
+                                <td>{{data_month.Total_Day.схема.9.gross}}</td>
+                                <td>{{data_month.Total_Day.схема.9.morja}}</td>
+                                <td class="full">{{data_month.Total_Day.схема.9.plan_day}}(100%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>{{data_month.TotalInformation_month.схема.9.gross}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.9.morja}}</td>
+                                <td>{{data_month.TotalInformation_month.схема.9.plan_month}} (100%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col--left left">
+                <div class="left__title-card">Прочее (5%)</div>
+            </div>
+            <div class="col col--right right">
+                <div class="table-wrapper">
+                    <table class="table-main">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Рекламодатели</th>
+                                <th colspan="3">За 02.07.2020 (ПН)</th>
+                                <th colspan="3">За За Август</th>
+                            </tr>
+                            <tr>
+                                <th>Оборотка</th>
+                                <th>Маржа</th>
+                                <th>План</th>
+                                <th>Оборотка</th>
+                                <th>Маржа</th>
+                                <th>План</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CAKE</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0 (0%)
+                                    <span class="load"></span>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0 (0%)
+                                    <span class="load"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
