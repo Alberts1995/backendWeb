@@ -1,0 +1,1 @@
+.left__table tbody td{width:50%}.overlay{position:fixed;display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:600;z-index:99}.overlay,.overlay:before{top:0;bottom:0;right:0;left:0}.overlay:before{content:"";position:absolute;z-index:-1;opacity:.8;background:#000}
